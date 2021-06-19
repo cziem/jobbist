@@ -6,7 +6,7 @@
       class="flex-column hero-content white--text"
       dark
     >
-      <p class="text-h3 text-md-h1 text-capitalize">End your job search</p>
+      <p class="text-h3 text-md-h1 mb-8 text-capitalize">End your job search</p>
       <p class="text-body-1 text-md-h5 font-weight-light lead-text">
         Put yourself in front of your next company, Jobbist makes job search
         elegant and stress-free
