@@ -38,7 +38,10 @@
       <v-col class="col-auto" justify="center" align-self="center">
         <p class="text-body-2 text--secondary">
           {{ copyright }} Copyright by
-          <strong class="text-uppercase">Jobbist</strong>
+          <strong class="text-uppercase">
+            <span class="font-weight-light">Job</span>
+            <span>bist</span>
+          </strong>
         </p>
       </v-col>
       <v-divider inset vertical />

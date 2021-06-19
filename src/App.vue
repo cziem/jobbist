@@ -15,3 +15,9 @@ export default Vue.extend({
   }),
 });
 </script>
+
+<style lang="scss">
+.v-application p {
+  margin-bottom: 0 !important;
+}
+</style>

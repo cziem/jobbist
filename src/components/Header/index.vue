@@ -7,7 +7,10 @@
     elevate-on-scroll
     scroll-target="#main-content"
   >
-    <v-app-bar-title>Jobbist</v-app-bar-title>
+    <v-app-bar-title class="text-uppercase title">
+      <span class="font-weight-light">Job</span>
+      <span>bist</span>
+    </v-app-bar-title>
 
     <v-spacer />
 
@@ -55,6 +58,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.title {
+  color: grey;
+}
 .navLinks {
   text-decoration: none;
   color: grey;
