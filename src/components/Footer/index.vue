@@ -10,7 +10,7 @@
               :key="`${idx}__${contact.text}`"
             >
               <v-icon left>{{ contact.icon }}</v-icon>
-              <v-text>{{ contact.text }}</v-text>
+              <p>{{ contact.text }}</p>
             </v-list-item>
           </v-list>
         </v-col>
@@ -36,10 +36,10 @@
 
     <v-row justify="center" class="mt-2">
       <v-col class="col-auto" justify="center" align-self="center">
-        <v-text class="text-body-2 text--secondary">
+        <p class="text-body-2 text--secondary">
           {{ copyright }} Copyright by
           <strong class="text-uppercase">Jobbist</strong>
-        </v-text>
+        </p>
       </v-col>
       <v-divider inset vertical />
       <v-col class="col-auto">
