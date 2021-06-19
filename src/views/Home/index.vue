@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <p>This is the home page</p>
+    <!-- <p>This is the home page</p> -->
   </div>
 </template>
 
