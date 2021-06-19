@@ -13,7 +13,7 @@
 
     <v-list class="d-none d-sm-flex">
       <v-list-item v-for="nav in navList" :key="nav.name">
-        <router-link class="navLinks text--primary" :to="nav.to" exact>{{
+        <router-link class="navLinks" :to="nav.to" exact>{{
           nav.name
         }}</router-link>
       </v-list-item>
@@ -57,5 +57,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .navLinks {
   text-decoration: none;
+  color: grey;
+}
+.router-link-exact-active.router-link-active {
+  color: #4db6ac;
 }
 </style>
