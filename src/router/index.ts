@@ -1,9 +1,11 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home/index.vue";
+import Login from "@/views/auth/Login.vue";
 
 // Layouts
 import AppLayout from "@/components/layouts/AppLayout.vue";
+import AuthLayout from "@/components/layouts/AuthLayout.vue";
 
 Vue.use(VueRouter);
 
@@ -26,6 +28,15 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
     meta: {
       layout: AppLayout,
+    },
+  },
+  /* AUTHENTICATION ROUTES */
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    meta: {
+      layout: AuthLayout,
     },
   },
 ];

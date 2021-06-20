@@ -64,7 +64,7 @@ export default Vue.extend({
     bottom: -20px;
     position: absolute;
     /* background: white; */
-    background-image: linear-gradient(45deg, #f5f5f5, #ffffff);
+    background-image: linear-gradient(45deg, #fdfdfd, #ffffff);
     transform: skewY(-10deg);
 
     &:hover {

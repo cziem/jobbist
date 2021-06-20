@@ -14,7 +14,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "Search Box",
+  name: "SearchBox",
   data: () => ({
     placeholder: "Search now...",
   }),

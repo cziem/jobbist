@@ -95,7 +95,7 @@ import Vue from "vue";
 import Button from "@/components/Button/index.vue";
 
 export default Vue.extend({
-  name: "About Section",
+  name: "AboutSection",
   components: {
     Button,
   },
