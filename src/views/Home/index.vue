@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <About />
+    <Subscribe />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import Vue from "vue";
 import Hero from "./Hero.vue";
 import About from "./About.vue";
+import Subscribe from "@/components/Subscribe/Subscribe.vue";
 
 export default Vue.extend({
   name: "Home",
@@ -16,6 +18,7 @@ export default Vue.extend({
   components: {
     Hero,
     About,
+    Subscribe,
   },
 });
 </script>
