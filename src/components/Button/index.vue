@@ -1,12 +1,25 @@
 <template>
-  <v-btn :type="type" class="btn" dark rounded depressed>{{ text }}</v-btn>
+  <v-btn
+    class="btn"
+    :type="type"
+    v-bind="$attrs"
+    v-bind:props="$props"
+    dark
+    rounded
+    depressed
+    >{{ text }}</v-btn
+  >
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+
 export default Vue.extend({
   props: {
-    text: String,
+    text: {
+      type: String,
+      required: true,
+    },
     type: String,
   },
   name: "Button",

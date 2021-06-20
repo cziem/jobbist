@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="white" class="flex-column py-5" padless>
+  <v-footer color="white" class="flex-column pb-5" padless>
     <v-container fluid>
       <v-row justify="center">
         <v-col class="teal lighten-2 col-12 col-sm-6 py-1 py-sm-12">

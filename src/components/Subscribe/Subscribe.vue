@@ -1,9 +1,9 @@
 <template>
-  <section class="subscribe mb-5">
-    <v-container>
+  <section class="subscribe">
+    <v-container class="subscribe-container">
       <v-row align="center" justify="center">
         <v-col sm="8" lg="6" class="text-center">
-          <div class="centralize">
+          <div class="centralize px-5 px-sm-1">
             <div class="icon-wrap">
               <v-img
                 src="../../assets/newsletter.png"
@@ -26,7 +26,7 @@
                 outlined
               ></v-text-field>
             </div>
-            <Button text="Send" type="button" size="large" />
+            <Button text="Send" type="button" size="large" large />
           </div>
         </v-col>
       </v-row>
@@ -47,6 +47,34 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.subscribe {
+  height: 40em;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #18e7d3 0, #19d0de 99%);
+
+  &:before {
+    content: "";
+    top: 35px;
+    right: 0;
+    left: 0;
+    bottom: -20px;
+    position: absolute;
+    /* background: white; */
+    background-image: linear-gradient(45deg, #f5f5f5, #ffffff);
+    transform: skewY(-10deg);
+
+    &:hover {
+      background: red;
+    }
+  }
+}
+.subscribe-container {
+  position: relative;
+}
 .centralize {
   display: flex;
   flex-direction: column;

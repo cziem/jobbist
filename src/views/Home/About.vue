@@ -2,7 +2,7 @@
   <section class="about">
     <v-container class="about-container px-3">
       <v-row>
-        <v-col md="5" class="px-sm-10">
+        <v-col md="6" class="px-5 px-sm-2">
           <div class="about-content d-flex">
             <div>
               <h2
@@ -73,7 +73,7 @@
           </div>
         </v-col>
         <v-spacer class="d-none d-md-flex"></v-spacer>
-        <v-col md="6" class="d-none d-md-flex">
+        <v-col md="5" class="d-none d-md-flex">
           <div class="about-right">
             <div class="about-phone">
               <v-img
