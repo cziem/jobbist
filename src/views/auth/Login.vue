@@ -8,67 +8,75 @@
       </p>
     </div>
 
-    <v-card class="pa-12 mx-6 mt-12 auth-card" rounded="0" flat>
-      <v-form>
-        <TextField
-          placeholder="hello@jobbist.com"
-          model="email"
-          :rules="rules.email"
-          required
-        />
-        <TextField
-          placeholder="password"
-          model="password"
-          :rules="rules.password"
-          append-icon="mdi-eye-off"
-          required
-        />
+    <div class="mx-6 mt-12 hide__away__main">
+      <div class="floating__btn__wrap">
+        <v-btn class="text-uppercase text--white text-caption" dark
+          >Sign Up</v-btn
+        >
+      </div>
 
-        <v-row align="center" justify="center" class="px-2">
-          <v-col>
-            <v-checkbox v-model="rememberMe" label="Remember me"></v-checkbox>
+      <v-card class="pa-12 auth-card" rounded="0" flat>
+        <v-form>
+          <TextField
+            placeholder="hello@jobbist.com"
+            model="email"
+            :rules="rules.email"
+            required
+          />
+          <TextField
+            placeholder="password"
+            model="password"
+            :rules="rules.password"
+            append-icon="mdi-eye-off"
+            required
+          />
+
+          <v-row align="center" justify="center" class="px-2">
+            <v-col>
+              <v-checkbox v-model="rememberMe" label="Remember me"></v-checkbox>
+            </v-col>
+            <v-col>
+              <v-row justify="end" class="mr-1">
+                <router-link
+                  color="#1ad7dd"
+                  class="text-decoration-none forgot-password"
+                  to="/forgot-password"
+                  >forgot password?</router-link
+                >
+              </v-row>
+            </v-col>
+          </v-row>
+
+          <v-row align="center" justify="center">
+            <Button text="Login" />
+          </v-row>
+        </v-form>
+
+        <v-row align="center" justify="center" class="my-5">
+          <div class="or-separtor">
+            <span>or</span>
+          </div>
+          <v-col sm="12">
+            <v-row align="center" justify="center">
+              <p class="text-uppercase text--secondary text-caption">
+                login with:
+              </p>
+            </v-row>
           </v-col>
-          <v-col>
-            <v-row justify="end" class="mr-1">
-              <router-link
-                color="#1ad7dd"
-                class="text-decoration-none forgot-password"
-                to="/forgot-password"
-                >forgot password?</router-link
+
+          <v-col sm="8" class="mt-2">
+            <v-row align="center" justify="space-around">
+              <v-btn class="text--white btn-facebook" dark rounded depressed
+                >Facebook</v-btn
+              >
+              <v-btn class="text--white btn-google" dark rounded depressed
+                >Google</v-btn
               >
             </v-row>
           </v-col>
         </v-row>
-
-        <v-row align="center" justify="center">
-          <Button text="Login" />
-        </v-row>
-      </v-form>
-
-      <v-row align="center" justify="center" class="my-5">
-        <div class="or-separtor">
-          <span>or</span>
-        </div>
-        <v-col sm="12">
-          <v-row align="center" justify="center">
-            <p class="text-uppercase text--secondary text-caption">
-              sign up with:
-            </p>
-          </v-row>
-        </v-col>
-
-        <v-col sm="8" class="mt-2">
-          <v-row align="center" justify="space-around">
-            <v-btn class="text--white btn-facebook" dark rounded depressed
-              >Facebook</v-btn
-            >
-            <v-btn class="text--white btn-google" dark rounded depressed
-              >Google</v-btn
-            >
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-card>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -106,6 +114,27 @@ export default Vue.extend({
     font-weight: 500;
   }
 }
+.hide__away__main {
+  position: relative;
+
+  &:hover .floating__btn__wrap {
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+.floating__btn__wrap {
+  position: absolute;
+  top: -32px;
+  right: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+
+  button {
+    background: linear-gradient(to bottom, #18e7d3 0, #19d0de 99%);
+  }
+}
+
 .auth-card {
   border-top: 3px solid #1ad7dd;
 }
