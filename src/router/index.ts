@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home/index.vue";
 import Login from "@/views/auth/Login.vue";
+import SignUp from "@/views/auth/SignUp.vue";
 
 // Layouts
 import AppLayout from "@/components/layouts/AppLayout.vue";
@@ -35,6 +36,14 @@ const routes: Array<RouteConfig> = [
     path: "/login",
     name: "Login",
     component: Login,
+    meta: {
+      layout: AuthLayout,
+    },
+  },
+  {
+    path: "/sign-up",
+    name: "Sign Up",
+    component: SignUp,
     meta: {
       layout: AuthLayout,
     },

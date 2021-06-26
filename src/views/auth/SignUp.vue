@@ -1,25 +1,33 @@
 <template>
   <div>
     <div class="mx-12 mx-md-15 text-center">
-      <h3 class="text-uppercase text-h4 font-weight-400 mb-4">Login</h3>
+      <h3 class="text-uppercase text-h4 mb-4 signup__text">
+        It's Free <strong class="font-weight-400">Join us</strong>
+      </h3>
       <p class="text-capitalize text-body-2 text--secondary mb-4 subtitle">
-        Welcome To JOB<span>BIST</span>, Please Login With Your Personal Account
-        Information.
+        Welcome To JOB<span>BIST</span>, Please Join Us With Your Personal
+        Account Information.
       </p>
     </div>
 
     <div class="mx-6 mt-12 hide__away__main">
       <div class="floating__btn__wrap">
         <v-btn
-          @click="goSignUp"
+          @click="goLogin"
           class="text-uppercase text--white text-caption"
           dark
-          >Sign Up</v-btn
+          >Login</v-btn
         >
       </div>
 
       <v-card class="pa-12 auth-card" rounded="0" flat>
         <v-form>
+          <TextField
+            placeholder="username"
+            model="username"
+            :rules="rules.username"
+            required
+          />
           <TextField
             placeholder="hello@jobbist.com"
             model="email"
@@ -36,7 +44,7 @@
 
           <v-row align="center" justify="center" class="px-2">
             <v-col>
-              <v-checkbox v-model="rememberMe" label="Remember me"></v-checkbox>
+              <v-checkbox v-model="acceptTC" label="Accept T&C"></v-checkbox>
             </v-col>
             <v-col>
               <v-row justify="end" class="mr-1">
@@ -51,7 +59,7 @@
           </v-row>
 
           <v-row align="center" justify="center">
-            <Button text="Login" />
+            <Button text="sign up" />
           </v-row>
         </v-form>
 
@@ -62,7 +70,7 @@
           <v-col sm="12">
             <v-row align="center" justify="center">
               <p class="text-uppercase text--secondary text-caption">
-                login with:
+                sign up with:
               </p>
             </v-row>
           </v-col>
@@ -96,8 +104,9 @@ export default Vue.extend({
   },
   data: () => ({
     valid: false,
-    rememberMe: false,
+    acceptTC: false,
     email: "",
+    username: "",
     password: "",
     rules: {
       email: [
@@ -105,17 +114,24 @@ export default Vue.extend({
         (v: KeyboardEvent) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
       password: [(v: KeyboardEvent) => !!v || "Password is required"],
+      username: [
+        (v: KeyboardEvent) => !!v || "Username is required",
+        (v: KeyboardEvent) => v.lenght < 2 || "Username too short",
+      ],
     },
   }),
   methods: {
-    goSignUp() {
-      this.$router.push("/sign-up");
+    goLogin() {
+      this.$router.push("/login");
     },
   },
 });
 </script>
 
 <style lang="scss" scoped>
+.signup__text {
+  font-weight: 300;
+}
 .subtitle {
   line-height: 1.8;
   span {
