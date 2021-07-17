@@ -101,10 +101,12 @@ export default Vue.extend({
     password: "",
     rules: {
       email: [
-        (v: KeyboardEvent) => !!v || "E-mail is required",
-        (v: KeyboardEvent) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+        (v: Event) => !!v || "E-mail is required",
+        (v: Event) =>
+          /.+@.+\..+/.test(v.target as HTMLInputElement).value ||
+          "E-mail must be valid",
       ],
-      password: [(v: KeyboardEvent) => !!v || "Password is required"],
+      password: [(v: Event) => !!v || "Password is required"],
     },
   }),
   methods: {

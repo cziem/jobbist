@@ -3,6 +3,7 @@
     v-bind="$attrs"
     :v-model="model"
     :placeholder="placeholder"
+    class="custom__textfield"
     rounded
     outlined
   ></v-text-field>
@@ -24,3 +25,18 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss">
+.custom__textfield {
+  .v-input__control .v-input__slot {
+    min-height: 45px;
+
+    .v-input__append-outer,
+    .v-input__append-inner,
+    .v-input__prepend-outer,
+    .v-input__prepend-inner {
+      margin-top: 10px;
+    }
+  }
+}
+</style>

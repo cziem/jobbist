@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home/index.vue";
 import Login from "@/views/auth/Login.vue";
 import SignUp from "@/views/auth/SignUp.vue";
+import ForgotPassword from "@/views/auth/ForgotPassword.vue";
 
 // Layouts
 import AppLayout from "@/components/layouts/AppLayout.vue";
@@ -44,6 +45,14 @@ const routes: Array<RouteConfig> = [
     path: "/sign-up",
     name: "Sign Up",
     component: SignUp,
+    meta: {
+      layout: AuthLayout,
+    },
+  },
+  {
+    path: "/forgot-password",
+    name: "Forgot Password",
+    component: ForgotPassword,
     meta: {
       layout: AuthLayout,
     },
